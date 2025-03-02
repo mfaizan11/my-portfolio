@@ -19,12 +19,12 @@ import {
         className="lg:min-h-[100svh] min-h-[95svh] flex flex-col items-center justify-start sm:justify-center text-white px-4 sm:px-6 pt-16 pb-4 sm:py-12 lg:py-6 relative"
       >
         <div className="relative max-w-4xl text-center z-10">
-          {/* Increase About Me heading size for mobile */}
+          {/* About Me heading size for mobile */}
           <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold text-primary mb-4 sm:mb-6">
             About Me
           </h2>
   
-          {/* Increase paragraph text size for mobile */}
+          {/* paragraph text size for mobile */}
           <p className="text-base sm:text-lg md:text-lg text-black leading-relaxed sm:leading-loose text-justify max-w-[90%] sm:max-w-3xl mx-auto  sm:px-">
             I am a <b>BS IT graduate</b> with a strong background in{" "}
             <b>web development</b>, dedicated to crafting high-quality,
@@ -36,7 +36,7 @@ import {
             <b> efficient and scalable applications</b>.
           </p>
   
-          {/* Tech Stack Section - Increase Icon Sizes for Mobile */}
+          {/* Tech Stack Section*/}
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-6 sm:mt-10">
             {[
               FaHtml5,
@@ -58,7 +58,7 @@ import {
           </div>
         </div>
   
-        {/* Animated Downward Arrow with Scroll Functionality */}
+        {/* Animated Downward Arrow */}
         <div className="absolute bottom-8 sm:bottom-28 lg:bottom-12 xl:bottom-20 flex flex-col items-center">
           <span className="text-xs sm:text-sm mt-6 text-primary opacity-80 mb-1 sm:mb-2">
             Services
@@ -67,7 +67,7 @@ import {
             to="services"
             smooth={true}
             duration={800}
-            offset={-100} // Increase offset to prevent overlap
+            offset={-100} 
             className="flex justify-center items-center cursor-pointer"
           >
             <motion.div

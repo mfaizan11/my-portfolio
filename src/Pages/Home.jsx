@@ -3,7 +3,7 @@ import { FaChevronDown } from "react-icons/fa";
 import { Link } from "react-scroll";
 import PortLogo from "../assets/PortLogo.png";
 import myCV from "../assets/MuhammadFaizan_CV.pdf";
-import heroImage from "../assets/herosect.png"; // Import the new background image
+import heroImage from "../assets/herosect.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -12,7 +12,7 @@ const fadeInUp = {
 
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.3 } }, // Staggered animation
+  visible: { opacity: 1, transition: { staggerChildren: 0.3 } }, 
 };
 
 const floatingDots = Array.from({ length: 8 }).map((_, index) => ({

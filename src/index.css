@@ -12,7 +12,7 @@
   --font-display: "Poppins", sans-serif;
 }
 
-/* Apply Global Font */
+
 body {
   font-family: var(--font-display);
   background-color: var(--color-background);

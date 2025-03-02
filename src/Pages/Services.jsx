@@ -62,9 +62,9 @@ const Services = () => {
       {/* Background Animation */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 blur-3xl opacity-50"
-        animate={{ scale: [1, 1.1, 1], rotate: [0, 180, 0] }} // Reduced animation
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }} // Slower updates
-        style={{ willChange: "transform, opacity" }} // GPU acceleration
+        animate={{ scale: [1, 1.1, 1], rotate: [0, 180, 0] }} 
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }} 
+        style={{ willChange: "transform, opacity" }} 
       />
 
       {/* Floating Dots */}
