@@ -41,10 +41,10 @@ const projects = {
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="py-12 px-6 bg-white text-primary">
+    <section id="projects" className="py-12 px-6 bg-white text-primary">
       <div className="container mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">
-          Portfolio / Experience
+          Portfolio
         </h2>
 
         {/* Static Websites Section */}
@@ -89,7 +89,7 @@ const Portfolio = () => {
             {projects.dynamic.map((project, index) => (
               <motion.div
                 key={index}
-                className="bg-white/10 p-6 rounded-lg shadow-lg backdrop-blur-md"
+                className="bg-white/10 backdrop-blur-xl p-4 md:p-6 rounded-xl md:rounded-2xl shadow-lg flex flex-col items-center text-center border border-primary/50 hover:border-primary transition-all"
                 whileHover={{ scale: 1.05 }}
               >
                 <h4 className="text-xl font-semibold mb-4 text-center">
@@ -125,7 +125,7 @@ const Portfolio = () => {
             {projects.shopify.map((project, index) => (
               <motion.div
                 key={index}
-                className="bg-white/10 p-6 rounded-lg shadow-lg backdrop-blur-md"
+                className="bg-white/10 backdrop-blur-xl p-4 md:p-6 rounded-xl md:rounded-2xl shadow-lg flex flex-col items-center text-center border border-primary/50 hover:border-primary transition-all"
                 whileHover={{ scale: 1.05 }}
               >
                 <h4 className="text-xl font-semibold mb-4 text-center">

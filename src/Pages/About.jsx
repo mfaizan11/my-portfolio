@@ -37,7 +37,7 @@ import {
           </p>
   
           {/* Tech Stack Section*/}
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-6 sm:mt-10">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-6 sm:mt-10 ">
             {[
               FaHtml5,
               FaCss3Alt,
@@ -59,7 +59,7 @@ import {
         </div>
   
         {/* Animated Downward Arrow */}
-        <div className="absolute bottom-8 sm:bottom-28 lg:bottom-12 xl:bottom-20 flex flex-col items-center">
+        <div className=" bottom-8 sm:bottom-28 lg:bottom-12 xl:bottom-20 flex flex-col items-center mt-1.5 lg:mt-0">
           <span className="text-xs sm:text-sm mt-6 text-primary opacity-80 mb-1 sm:mb-2">
             Services
           </span>
