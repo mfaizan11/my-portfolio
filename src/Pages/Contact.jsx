@@ -33,7 +33,7 @@ const Contact = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-  
+
       if (response.ok) {
         setSubmitted(true);
         setFormData({ name: "", email: "", message: "" }); // Clear form after submission
@@ -44,7 +44,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="relative min-h-screen flex flex-col items-center justify-center bg-darkBg overflow-hidden px-4"
+      className="relative min-h-{80vh} flex flex-col items-center justify-center bg-darkBg overflow-hidden px-4 pt-10"
     >
       {/* Glassmorphic Contact Form */}
       <motion.div
