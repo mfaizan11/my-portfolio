@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
 import { Link } from "react-scroll";
 import PortLogo from "../assets/PortLogo.png";
-import myCV from "../assets/MuhammadFaizan_CV.pdf";
+import myCV from "../assets/Muhammad-Faizan-Resume.pdf";
 import heroImage from "../assets/herosect.png";
 
 const fadeInUp = {
@@ -12,7 +12,7 @@ const fadeInUp = {
 
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.3 } }, 
+  visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
 };
 
 const floatingDots = Array.from({ length: 8 }).map((_, index) => ({
@@ -105,7 +105,7 @@ const Home = () => {
 
             <a
               href={myCV}
-              download="MuhammadFaizan_CV.pdf"
+              download="Muhammad-Faizan-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2 sm:px-6 sm:py-3 bg-white/20 text-white text-sm sm:text-base font-semibold rounded-lg shadow-md hover:bg-primary hover:text-white transition z-50"

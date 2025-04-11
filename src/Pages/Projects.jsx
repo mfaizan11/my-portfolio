@@ -1,23 +1,23 @@
 import { motion } from "framer-motion";
-import flasStore from "../assets/flasStore.png";
+// import flasStore from "../assets/flasStore.png";
 import EliteRoadWorks from "../assets/EliteRoadWorks.png";
 import albatross from "../assets/albatross.png";
+import digi from "../assets/digi.png";
+import fasht from "../assets/fasht.png";
+import raka from "../assets/raka.png";
+import speak from "../assets/speak.png";
+import poli from "../assets/poli.png";
+import astra from "../assets/astra.png";
 
 const projects = {
-  //   static: [
-  //     {
-  //       name: "Flas Store",
-  //       desktopImg: "/assets/flas-desktop.png",
-  //       mobileImg: "/assets/flas-mobile.png",
-  //       previewLink: "https://flasstore.com",
-  //     },
-  //     {
-  //       name: "Design with Sal",
-  //       desktopImg: "/assets/designwithsal-desktop.png",
-  //       mobileImg: "/assets/designwithsal-mobile.png",
-  //       previewLink: "https://designwithsal.com",
-  //     },
-  //   ],
+  // static: [
+  //   {
+  //     name: "Design with Sal",
+  //     desktopImg: "/assets/designwithsal-desktop.png",
+  //     mobileImg: "/assets/designwithsal-mobile.png",
+  //     previewLink: "https://designwithsal.com",
+  //   },
+  // ],
   dynamic: [
     {
       name: "Elite Road Works",
@@ -29,12 +29,49 @@ const projects = {
       desktopImg: albatross,
       previewLink: "https://albatross-sol.com",
     },
+    {
+      name: "DigiOpt Consulting",
+      desktopImg: digi,
+      previewLink: "https://digioptconsulting.com",
+    },
+    {
+      name: "Astra Byte Global",
+      desktopImg: astra,
+      previewLink: "Coming Soon",
+    },
   ],
   shopify: [
+    // {
+    //   name: "Flas Store",
+    //   desktopImg: flasStore,
+    //   previewLink: "https://shopflas.com",
+    // },
     {
-      name: "Flas Store",
-      desktopImg: flasStore,
-      previewLink: "https://shopflas.com",
+      name: "Islamic Fashtara Store",
+      desktopImg: fasht,
+      previewLink: "https://islamicfashtara.com",
+    },
+  ],
+  wordpress: [
+    // {
+    //   name: "Flas Store",
+    //   desktopImg: flasStore,
+    //   previewLink: "https://shopflas.com",
+    // },
+    {
+      name: "Poliscents",
+      desktopImg: poli,
+      previewLink: "https://poliscents.com/",
+    },
+    {
+      name: "Speakup Institute",
+      desktopImg: speak,
+      previewLink: "https://rakanaturals.com/",
+    },
+    {
+      name: "Raka Naturals",
+      desktopImg: raka,
+      previewLink: "https://poliscents.com/",
     },
   ],
 };
@@ -123,6 +160,44 @@ const Portfolio = () => {
           <h3 className="text-2xl font-semibold mb-6 mt-10">Shopfiy Stores</h3>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.shopify.map((project, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/10 backdrop-blur-xl p-4 md:p-6 rounded-xl md:rounded-2xl shadow-lg flex flex-col items-center text-center border border-primary/50 hover:border-primary transition-all"
+                whileHover={{ scale: 1.05 }}
+              >
+                <h4 className="text-xl font-semibold mb-4 text-center">
+                  {project.name}
+                </h4>
+                <div className="flex items-center gap-4 justify-center">
+                  {/* Laptop Image */}
+                  <img
+                    src={project.desktopImg}
+                    alt={`${project.name} Desktop`}
+                    className="w-1/2 "
+                  />
+                </div>
+                <div className="mt-4 text-center">
+                  <a
+                    href={project.previewLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-accent transition"
+                  >
+                    Preview Website
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/*  wordpress Section */}
+        <div>
+          <h3 className="text-2xl font-semibold mb-6 mt-10">
+            Wordpress Websites
+          </h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            {projects.wordpress.map((project, index) => (
               <motion.div
                 key={index}
                 className="bg-white/10 backdrop-blur-xl p-4 md:p-6 rounded-xl md:rounded-2xl shadow-lg flex flex-col items-center text-center border border-primary/50 hover:border-primary transition-all"

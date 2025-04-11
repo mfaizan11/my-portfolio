@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import {
   FaCode,
   FaShoppingCart,
-  FaSearch,
   FaUsers,
   FaBug,
 } from "react-icons/fa";
@@ -22,13 +21,13 @@ const services = [
     description:
       "Full-service Shopify solutions including store setup, theme customization, and maintenance. Expert product listing, inventory management, and payment gateway integration.",
   },
-  {
-    id: 3,
-    title: "SEO Optimization",
-    icon: <FaSearch />,
-    description:
-      "Boost your search rankings with keyword research, on-page optimization, and technical SEO. Including content strategy, backlink building, and local SEO optimization.",
-  },
+  // {
+  //   id: 3,
+  //   title: "SEO Optimization",
+  //   icon: <FaSearch />,
+  //   description:
+  //     "Boost your search rankings with keyword research, on-page optimization, and technical SEO. Including content strategy, backlink building, and local SEO optimization.",
+  // },
   {
     id: 4,
     title: "Social Media Management",
