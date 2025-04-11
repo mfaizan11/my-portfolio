@@ -157,7 +157,7 @@ const Portfolio = () => {
 
         {/* Dynamic Shopify Section */}
         <div>
-          <h3 className="text-2xl font-semibold mb-6 mt-10">Shopfiy Stores</h3>
+          <h3 className="text-2xl font-semibold mb-6 mt-10">Shopify Stores</h3>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.shopify.map((project, index) => (
               <motion.div
