@@ -37,6 +37,7 @@ const projects = {
     {
       name: "Astra Byte Global",
       desktopImg: astra,
+      comingSoon: true,
       previewLink: "Coming Soon",
     },
   ],
@@ -66,12 +67,12 @@ const projects = {
     {
       name: "Speakup Institute",
       desktopImg: speak,
-      previewLink: "https://rakanaturals.com/",
+      previewLink: "https://speakupuae.com/",
     },
     {
       name: "Raka Naturals",
       desktopImg: raka,
-      previewLink: "https://poliscents.com/",
+      previewLink: "https://rakanaturals.com/",
     },
   ],
 };
@@ -141,14 +142,20 @@ const Portfolio = () => {
                   />
                 </div>
                 <div className="mt-4 text-center">
-                  <a
-                    href={project.previewLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-accent transition"
-                  >
-                    Preview Website
-                  </a>
+                  {project.comingSoon ? (
+                    <span className="px-6 py-2 bg-yellow-500 text-white font-semibold rounded-lg cursor-not-allowed">
+                      🚧 Work in Progress
+                    </span>
+                  ) : (
+                    <a
+                      href={project.previewLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-6 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-accent transition"
+                    >
+                      Preview Website
+                    </a>
+                  )}
                 </div>
               </motion.div>
             ))}
