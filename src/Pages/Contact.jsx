@@ -28,19 +28,30 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.name && formData.email && formData.message) {
-      const response = await fetch("https://formspree.io/f/xjkgdwjd", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSubmitted(true);
-        setFormData({ name: "", email: "", message: "" }); // Clear form after submission
-        setTimeout(() => setSubmitted(false), 3000);
+      try {
+        const response = await fetch("https://formspree.io/f/xjkgdwjd", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+  
+        const data = await response.json();
+        console.log("Formspree response:", data); // Check for errors
+  
+        if (response.ok) {
+          setSubmitted(true);
+          setFormData({ name: "", email: "", message: "" });
+          setTimeout(() => setSubmitted(false), 3000);
+        } else {
+          alert("Error submitting form: " + data?.error || "Unknown error");
+        }
+      } catch (error) {
+        console.error("Submission error:", error);
+        alert("Something went wrong!");
       }
     }
   };
+  
   return (
     <div
       id="contact"
