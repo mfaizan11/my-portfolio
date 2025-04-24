@@ -14,6 +14,7 @@ const Navbar = () => {
           <a href="#" className="h-full">
             <img src={Logo} alt="Logo" className="h-12 md:h-16" />
           </a>
+          
 
           {/* Mobile Contact Info (Visible only on mobile) */}
           <div className="flex flex-col items-center md:hidden ">
@@ -82,6 +83,7 @@ const Navbar = () => {
             >
               Let&apos;s Connect
             </Link>
+
           </div>
 
           {/* Mobile Menu Button */}

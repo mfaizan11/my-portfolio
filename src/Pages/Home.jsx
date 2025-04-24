@@ -76,7 +76,11 @@ const Home = () => {
             loading="lazy"
           />
         </motion.div>
-
+        {/* <div className="absolute bottom-2 right-2 bg-green-500 rounded-full px-2 py-1 text-xs text-white font-medium shadow-lg flex items-center justify-center">
+          <div className="absolute inset-0 bg-green-400 rounded-full opacity-50 blur-sm"></div>
+          <div className="absolute inset-0 bg-green-300 rounded-full opacity-30 animate-pulse"></div>
+          <span className="relative z-10 whitespace-nowrap">Open to Work</span>
+        </div> */}
         {/* Text Section */}
         <motion.div
           className="text-center md:text-left px-2 sm:px-4"
