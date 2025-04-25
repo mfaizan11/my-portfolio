@@ -97,15 +97,14 @@ const Home = () => {
 
           {/* Buttons */}
           <div className="mt-5 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <Link
-              to="contact"
-              smooth={true}
-              duration={800}
-              offset={-70}
+            <a
+              href="https://www.linkedin.com/in/muhammad-faizan-76a024283"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-5 py-2 sm:px-6 sm:py-3 bg-primary text-white text-sm sm:text-base font-semibold rounded-lg shadow-md hover:bg-accent transition cursor-pointer z-50"
             >
               Let&apos;s Connect
-            </Link>
+            </a>
 
             <a
               href={myCV}
