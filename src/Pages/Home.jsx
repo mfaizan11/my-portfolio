@@ -1,22 +1,24 @@
-// import { useEffect } from "react";
+import { useMemo } from "react";
 import { motion } from "framer-motion";
 import PortLogo from "../assets/PortLogo.webp";
 import myCV from "../assets/Muhammad-Faizan-Resume.pdf";
 import heroImage from "../assets/herosect.webp";
 import { Icon } from "@iconify/react";
 
-const floatingDots = Array.from({ length: 8 }).map((_, index) => ({
-  id: index,
-  style: {
-    top: `${Math.random() * 100}%`,
-    left: `${Math.random() * 100}%`,
-  },
-}));
-
 const Home = () => {
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const floatingDots = useMemo(() => {
+    return Array.from({ length: 8 }).map((_, index) => ({
+      id: index,
+      style: {
+        top: `${Math.random() * 100}%`,
+        left: `${Math.random() * 100}%`,
+      },
+    }));
+  }, []);
 
   return (
     <div
@@ -66,17 +68,18 @@ const Home = () => {
             height="200"
             loading="eager"
             fetchPriority="high"
+            decoding="async"
             className="object-cover"
           />
         </div>
 
         {/* Text Content */}
         <div className="text-center md:text-left px-2 sm:px-4">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary font-poppins">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold font-poppins text-white">
             Hi, I&apos;m <br />
-            <span className="text-white">Muhammad Faizan!</span>
+            <span className="text-primary">Muhammad Faizan!</span>
           </h1>
-          <p className="mt-3 text-sm sm:text-base md:text-lg text-darkText">
+          <p className="mt-3 text-sm sm:text-base md:text-lg text-gray-200">
             A <b>passionate</b> <b>web developer</b> crafting{" "}
             <b>stunning digital experiences</b>.
           </p>
@@ -97,7 +100,7 @@ const Home = () => {
               download="Muhammad-Faizan-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 sm:px-6 sm:py-3 bg-white/20 text-white text-sm sm:text-base font-semibold rounded-lg shadow-md hover:bg-primary hover:text-white transition z-50"
+              className="px-5 py-2 sm:px-6 sm:py-3 bg-white/10 text-white text-sm sm:text-base font-semibold rounded-lg shadow-md hover:bg-primary hover:text-white transition z-50"
             >
               Download Resume
             </a>
@@ -107,7 +110,7 @@ const Home = () => {
 
       {/* Scroll Down Arrow */}
       <div className="absolute bottom-24 sm:bottom-16 flex flex-col items-center">
-        <span className="text-white text-xs sm:text-sm opacity-80 mb-1 sm:mb-2">
+        <span className="text-gray-200 text-xs sm:text-sm opacity-90 mb-1 sm:mb-2">
           About Me
         </span>
         <button
