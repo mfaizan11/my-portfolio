@@ -5,7 +5,6 @@ import myCV from "../assets/Muhammad-Faizan-Resume.pdf";
 import heroImage from "../assets/herosect.webp";
 import { Icon } from "@iconify/react";
 
-
 const floatingDots = Array.from({ length: 8 }).map((_, index) => ({
   id: index,
   style: {
@@ -117,7 +116,11 @@ const Home = () => {
           aria-label="Scroll down to About Me section"
           title="Scroll down"
         >
-          <Icon icon="fa:chevron-down" className="text-primary opacity-80 hover:text-accent transition" width="28" />
+          <Icon
+            icon="fa:chevron-down"
+            className="text-primary opacity-80 hover:text-accent transition"
+            width="28"
+          />
         </button>
       </div>
     </div>

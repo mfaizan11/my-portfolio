@@ -148,8 +148,10 @@ const Portfolio = () => {
                 <img
                   src={project.desktopImg}
                   alt={`${project.name} Desktop`}
+                  width="400"
+                  height="300"
                   loading="lazy"
-                  className="w-1/2"
+                  className="w-full max-w-[400px] h-auto mx-auto"
                 />
               </div>
               <div className="mt-4 flex-grow">
