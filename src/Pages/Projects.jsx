@@ -1,12 +1,12 @@
 import { Icon } from "@iconify/react";
-import EliteRoadWorks from "../assets/EliteRoadWorks.png";
-import albatross from "../assets/albatross.png";
-import digi from "../assets/digi.png";
-import fasht from "../assets/fasht.png";
-import raka from "../assets/raka.png";
-import speak from "../assets/speak.png";
-import poli from "../assets/poli.png";
-import astra from "../assets/astra.png";
+import EliteRoadWorks from "../assets/EliteRoadWorks.webp";
+import albatross from "../assets/albatross.webp";
+import digi from "../assets/digi.webp";
+import fasht from "../assets/fasht.webp";
+import raka from "../assets/raka.webp";
+import speak from "../assets/speak.webp";
+import poli from "../assets/poli.webp";
+import astra from "../assets/astra.webp";
 
 const techIcons = {
   react: "logos:react",
