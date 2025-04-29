@@ -1,16 +1,5 @@
-import { motion } from "framer-motion";
-import { FaPaperPlane } from "react-icons/fa";
 import { useState } from "react";
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
-};
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
-};
+import { Icon } from "@iconify/react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -34,16 +23,16 @@ const Contact = () => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
         });
-  
+
         const data = await response.json();
-        console.log("Formspree response:", data); // Check for errors
-  
+        console.log("Formspree response:", data);
+
         if (response.ok) {
           setSubmitted(true);
           setFormData({ name: "", email: "", message: "" });
           setTimeout(() => setSubmitted(false), 3000);
         } else {
-          alert("Error submitting form: " + data?.error || "Unknown error");
+          alert("Error submitting form: " + (data?.error || "Unknown error"));
         }
       } catch (error) {
         console.error("Submission error:", error);
@@ -51,40 +40,22 @@ const Contact = () => {
       }
     }
   };
-  
+
   return (
     <div
       id="contact"
-      className="relative min-h-{80vh} flex flex-col items-center justify-center bg-darkBg overflow-hidden px-4 pt-10"
+      className="relative min-h-[80vh] flex flex-col py-4 items-center justify-center bg-darkBg overflow-hidden px-4 pt-10"
     >
-      {/* Glassmorphic Contact Form */}
-      <motion.div
-        className="relative bg-white/10 backdrop-blur-3xl p-6 sm:p-8 md:p-10 lg:p-12 min-h-[50vh] sm:min-h-[60vh] rounded-3xl shadow-lg max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl mx-4 flex flex-col items-center space-y-6"
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-      >
-        {/* Contact Form Heading */}
-        <motion.h2
-          className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary text-center"
-          variants={fadeInUp}
-        >
+      <div className="relative bg-white/10 backdrop-blur-3xl p-6 sm:p-8 md:p-10 lg:p-12 min-h-[50vh] sm:min-h-[60vh] rounded-3xl shadow-lg max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl mx-4 flex flex-col items-center space-y-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary text-center">
           Get in Touch
-        </motion.h2>
-        <motion.p
-          className="text-sm sm:text-base md:text-lg text-darkText text-center"
-          variants={fadeInUp}
-        >
-          Feel free to drop a message. I will get back to you soon!
-        </motion.p>
+        </h2>
 
-        {/* Contact Form */}
-        <motion.form
-          className="w-full flex flex-col gap-4"
-          onSubmit={handleSubmit}
-          variants={fadeInUp}
-        >
-          {/* Name Input */}
+        <p className="text-sm sm:text-base md:text-lg text-gray-300 text-center">
+          Feel free to drop a message. I will get back to you soon!
+        </p>
+
+        <form className="w-full flex flex-col gap-4" onSubmit={handleSubmit}>
           <input
             type="text"
             name="name"
@@ -92,10 +63,9 @@ const Contact = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border text-white border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full px-4 py-2 border text-white border-gray-300 bg-transparent rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-primary"
           />
 
-          {/* Email Input */}
           <input
             type="email"
             name="email"
@@ -103,10 +73,9 @@ const Contact = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 text-white border  border-white rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full px-4 py-2 text-white border border-white bg-transparent rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-primary"
           />
 
-          {/* Message Input */}
           <textarea
             name="message"
             placeholder="Your Message"
@@ -114,31 +83,24 @@ const Contact = () => {
             onChange={handleChange}
             required
             rows="4"
-            className="w-full px-4 py-2 border text-white border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full px-4 py-2 border text-white border-gray-300 bg-transparent rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-primary"
           ></textarea>
 
-          {/* Submit Button */}
-          <motion.button
+          <button
             type="submit"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
             className="w-full px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-accent transition flex items-center justify-center gap-2"
           >
             Send Message
-            <FaPaperPlane />
-          </motion.button>
-        </motion.form>
+            <Icon icon="fa-solid:paper-plane" />
+          </button>
+        </form>
 
-        {/* Success Message */}
         {submitted && (
-          <motion.p
-            className="text-green-400 font-semibold text-sm sm:text-base"
-            variants={fadeInUp}
-          >
+          <p className="text-green-400 font-semibold text-sm sm:text-base">
             ✅ Message Sent Successfully!
-          </motion.p>
+          </p>
         )}
-      </motion.div>
+      </div>
     </div>
   );
 };

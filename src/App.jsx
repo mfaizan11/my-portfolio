@@ -1,24 +1,28 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { lazy, Suspense } from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Services from "./Pages/Services";
-import Projects from "./Pages/Projects";
-import Contact from "./Pages/Contact";
 import "./index.css";
+
+// Lazy load only heavy sections
+const About = lazy(() => import("./Pages/About"));
+const Services = lazy(() => import("./Pages/Services"));
+const Projects = lazy(() => import("./Pages/Projects"));
+const Contact = lazy(() => import("./Pages/Contact"));
 
 const App = () => {
   return (
-    <Router>
+    <>
       <Navbar />
       <Home />
-      <About />
-      <Services />
-      <Projects />
-      <Contact />
+      <Suspense fallback={<div className="text-white min-h-screen flex justify-center items-center">Loading...</div>}>
+        <About />
+        <Services />
+        <Projects />
+        <Contact />
+      </Suspense>
       <Footer />
-    </Router>
+    </>
   );
 };
 

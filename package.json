@@ -11,14 +11,16 @@
   },
   "dependencies": {
     "@fontsource/poppins": "^5.1.1",
+    "@iconify-icons/fa-brands": "^1.2.4",
+    "@iconify-icons/si-glyph": "^1.2.6",
+    "@iconify-icons/simple-icons": "^1.2.74",
+    "@iconify/react": "^5.2.1",
     "@tailwindcss/vite": "^4.0.8",
     "framer-motion": "^12.4.7",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0",
     "react-router": "^6.29.0",
-    "react-router-dom": "^6.29.0",
     "react-scroll": "^1.9.3"
   },
   "devDependencies": {
@@ -34,7 +36,9 @@
     "eslint-plugin-react-refresh": "^0.4.18",
     "globals": "^15.14.0",
     "postcss": "^8.5.3",
+    "rollup-plugin-visualizer": "^5.14.0",
     "tailwindcss": "^4.0.8",
-    "vite": "^6.1.0"
+    "vite": "^6.1.0",
+    "vite-plugin-inspect": "^11.0.1"
   }
 }

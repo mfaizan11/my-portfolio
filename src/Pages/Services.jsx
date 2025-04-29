@@ -1,44 +1,32 @@
 import { motion } from "framer-motion";
-import {
-  FaCode,
-  FaShoppingCart,
-  FaUsers,
-  FaBug,
-} from "react-icons/fa";
+import { Icon } from "@iconify/react";
 
 const services = [
   {
     id: 1,
     title: "Web Development",
-    icon: <FaCode />,
+    icon: <Icon icon="fa-solid:code" width="40" height="40" />,
     description:
       "Custom websites using modern technologies. Specialized in both static and dynamic websites with responsive design. From simple business sites to complex web applications.",
   },
   {
     id: 2,
     title: "Shopify Development",
-    icon: <FaShoppingCart />,
+    icon: <Icon icon="fa-solid:shopping-cart" width="40" height="40" />,
     description:
       "Full-service Shopify solutions including store setup, theme customization, and maintenance. Expert product listing, inventory management, and payment gateway integration.",
   },
-  // {
-  //   id: 3,
-  //   title: "SEO Optimization",
-  //   icon: <FaSearch />,
-  //   description:
-  //     "Boost your search rankings with keyword research, on-page optimization, and technical SEO. Including content strategy, backlink building, and local SEO optimization.",
-  // },
   {
     id: 4,
     title: "Social Media Management",
-    icon: <FaUsers />,
+    icon: <Icon icon="fa-solid:users" width="40" height="40" />,
     description:
       "Strategic social media management across platforms. Content creation, community engagement, and paid campaigns. Analytics tracking and audience growth strategies.",
   },
   {
     id: 5,
     title: "Technical Support",
-    icon: <FaBug />,
+    icon: <Icon icon="fa-solid:bug" width="40" height="40" />,
     description:
       "Expert troubleshooting and bug fixing for websites. Quick resolution of performance issues and broken functionality. Regular maintenance to keep your website running smoothly.",
   },
@@ -59,19 +47,18 @@ const Services = () => {
       className="relative min-h-screen flex flex-col items-center justify-center bg-darkBg overflow-hidden px-4 py-8 md:py-16"
     >
       <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold text-primary mb-4 sm:mb-6">
-            Services
-          </h2>
-      {/* Background Animation */}
+        Services
+      </h2>
+
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 blur-3xl opacity-50"
-        animate={{ scale: [1, 1.1, 1], rotate: [0, 180, 0] }} 
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }} 
-        style={{ willChange: "transform, opacity" }} 
+        animate={{ scale: [1, 1.1, 1], rotate: [0, 180, 0] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        style={{ willChange: "transform, opacity" }}
       />
 
-      {/* Floating Dots */}
       <div className="absolute inset-0 overflow-hidden">
-        {floatingDots.slice(0, window.innerWidth < 768 ? 10 : 20).map((dot) => (
+        {floatingDots.map((dot) => (
           <motion.div
             key={dot.id}
             className="absolute w-1 h-1 md:w-2 md:h-2 bg-white/20 rounded-full shadow-lg"
@@ -92,7 +79,6 @@ const Services = () => {
         ))}
       </div>
 
-      {/* Services Grid */}
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full max-w-5xl mx-auto px-4 md:px-8">
         {services.map((service) => (
           <motion.div
