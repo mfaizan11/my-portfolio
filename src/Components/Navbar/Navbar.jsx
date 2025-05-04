@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white/90 backdrop-blur-md fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[90%] max-w-6xl shadow-[0_0_15px_rgba(255,255,255,0.6)] drop-shadow-lg rounded-3xl">
+    <nav className="bg-white/90 border-2 border-primary backdrop-blur-md fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[90%] max-w-6xl shadow-[0_0_15px_rgba(255,255,255,0.6)] drop-shadow-lg rounded-3xl">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4 md:py-2">
           {/* Logo */}
@@ -47,7 +47,7 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 text-xl font-semibold">
-          <a
+            <a
               href="#about"
               className="cursor-pointer text-primary hover:text-accent transition"
             >
@@ -85,15 +85,17 @@ const Navbar = () => {
 
         {/* Mobile Menu Dropdown */}
         {isOpen && (
-          <div className="md:hidden flex flex-col items-center py-4 space-y-4 bg-white rounded-2xl m-4 shadow-lg">
+          <div className="md:hidden flex flex-col items-center py-4 space-y-4 bg-white border-1 border-primary rounded-2xl m-4 shadow-lg">
             <a
               href="#about"
               className="cursor-pointer text-primary hover:text-accent transition"
+              onClick={() => setIsOpen(false)}
             >
               Who I Am
             </a>
             <a
               href="#services"
+              onClick={() => setIsOpen(false)}
               className="text-primary hover:text-accent transition"
             >
               What I Do
@@ -101,12 +103,14 @@ const Navbar = () => {
 
             <a
               href="#projects"
+              onClick={() => setIsOpen(false)}
               className="cursor-pointer text-primary hover:text-accent transition"
             >
               Portfolio & Work
             </a>
             <a
               href="#contact"
+              onClick={() => setIsOpen(false)}
               className="cursor-pointer text-primary hover:text-accent transition"
             >
               Let&apos;s Connect

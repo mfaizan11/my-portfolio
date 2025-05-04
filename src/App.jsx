@@ -9,6 +9,7 @@ import "./index.css";
 const About = lazy(() => import("./Pages/About"));
 const Services = lazy(() => import("./Pages/Services"));
 const Projects = lazy(() => import("./Pages/Projects"));
+const Certifications = lazy(() => import("./Pages/Certifications"))
 const Contact = lazy(() => import("./Pages/Contact"));
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
       <LazySection load={() => <About />} fallback={<div className="text-white p-10">Loading About...</div>} />
       <LazySection load={() => <Services />} fallback={<div className="text-white p-10">Loading Services...</div>} />
       <LazySection load={() => <Projects />} fallback={<div className="text-white p-10">Loading Projects...</div>} />
+      <LazySection load={() => <Certifications />} fallback={<div className="text-white p-10">Loading Certifications...</div>} />
       <LazySection load={() => <Contact />} fallback={<div className="text-white p-10">Loading Contact...</div>} />
 
       <Footer />

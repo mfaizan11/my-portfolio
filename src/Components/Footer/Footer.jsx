@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import Logo from "../../assets/Logo.png";
+import Pill from "./Pill";
 
 const Footer = () => {
   return (
@@ -64,6 +65,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Muhammad Faizan. All rights reserved.
         </p>
       </div>
+      <Pill />
     </footer>
   );
 };

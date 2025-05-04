@@ -37,15 +37,15 @@ const About = () => {
           About Me
         </h2>
 
-        <p className="text-base sm:text-lg md:text-lg text-black leading-relaxed sm:leading-loose text-justify max-w-[90%] sm:max-w-3xl mx-auto">
+        <p className="text-sm sm:text-lg md:text-lg text-black leading-relaxed sm:leading-loose text-justify md:text-justify max-w-[90%] sm:max-w-3xl mx-auto">
           I am a <b>BS IT graduate</b> with a strong background in{" "}
-          <b>web development</b>, dedicated to crafting high-quality,
+          <b>web development</b>, dedicated to crafting high-quality, 
           interactive, and <b>user-friendly digital experiences</b>. My
           expertise lies in <b>responsive design</b>, modern{" "}
           <b>front-end frameworks</b>, and optimizing performance for a seamless{" "}
           <b>user experience</b>. I thrive on problem-solving and continuously
           expanding my skill set to build{" "}
-          <b>efficient and scalable applications</b>.
+          <b>efficient and scalable applications</b>. 
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-6 sm:mt-10 md:px-10">
@@ -55,7 +55,12 @@ const About = () => {
               className="p-4 sm:p-5 md:p-6 bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl shadow-lg transition-transform duration-300 hover:scale-110"
               title={name}
             >
-              <Icon icon={icon} className="text-primary" width="48" height="48" />
+              <Icon
+                icon={icon}
+                className="text-primary"
+                width="48"
+                height="48"
+              />
             </div>
           ))}
         </div>
@@ -76,7 +81,11 @@ const About = () => {
             animate={{ y: [0, 10, 0], scale: [1, 1.2, 1] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           >
-            <Icon icon="fa:chevron-down" className="text-primary opacity-80 hover:text-accent transition" width="28" />
+            <Icon
+              icon="fa:chevron-down"
+              className="text-primary opacity-80 hover:text-accent transition"
+              width="28"
+            />
           </motion.div>
         </Link>
       </div>
