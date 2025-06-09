@@ -9,6 +9,7 @@ import "./index.css";
 const About = lazy(() => import("./Pages/About"));
 const Services = lazy(() => import("./Pages/Services"));
 const Projects = lazy(() => import("./Pages/Projects"));
+const Issues = lazy(()=> import("./Pages/Issues"));
 const Certifications = lazy(() => import("./Pages/Certifications"))
 const Contact = lazy(() => import("./Pages/Contact"));
 
@@ -18,11 +19,12 @@ const App = () => {
       <Navbar />
       <Home />
 
-      <LazySection load={() => <About />} fallback={<div className="text-white p-10">Loading About...</div>} />
-      <LazySection load={() => <Services />} fallback={<div className="text-white p-10">Loading Services...</div>} />
-      <LazySection load={() => <Projects />} fallback={<div className="text-white p-10">Loading Projects...</div>} />
-      <LazySection load={() => <Certifications />} fallback={<div className="text-white p-10">Loading Certifications...</div>} />
-      <LazySection load={() => <Contact />} fallback={<div className="text-white p-10">Loading Contact...</div>} />
+      <LazySection load={() => <About />} fallback={<div className="text-primary text-center p-10">Loading Sections...</div>} />
+      <LazySection load={() => <Services />} fallback={<div className="text-primary p-10"></div>} />
+      <LazySection load={() => <Projects />} fallback={<div className="text-primary p-10"></div>} />
+      <LazySection load={() => <Issues/>} fallback={<div className="text-primary p-10"></div>} />
+      <LazySection load={() => <Certifications />} fallback={<div className="text-primary p-10"></div>} />
+      <LazySection load={() => <Contact />} fallback={<div className="text-primary p-10"></div>} />
 
       <Footer />
     </>

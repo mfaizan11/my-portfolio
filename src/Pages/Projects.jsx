@@ -135,13 +135,13 @@ const Portfolio = () => {
         </h2>
 
         {/* Unified grid for all projects */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
               className="bg-white/10 backdrop-blur-xl hover:shadow-xl p-4 md:p-6 rounded-xl md:rounded-2xl shadow-lg flex flex-col items-center text-center border-3 border-primary/50 hover:border-primary transition-all h-full"
             >
-              <h2 className="text-xl font-semibold mb-4 text-center">
+              <h2 className="text-[11px]  md:text-xl  font-semibold mb-4 text-center">
                 {project.name}
               </h2>
               <div className="flex items-center gap-4 justify-center">
@@ -180,13 +180,13 @@ const Portfolio = () => {
                         );
                       })}
                     </div>
-                    <p className="text-sm py-2 text-gray-600">{tech.desc}</p>
+                    <p className="text-sm py-2 text-gray-600 hidden md:block">{tech.desc}</p>
                   </div>
                 ))}
               </div>
-              <div className="mt-4 text-center">
+              <div className=" mt-4 text-center flex flex-row items-center justify-center gap-4">
                 {project.comingSoon ? (
-                  <span className="px-6 py-2 bg-yellow-500 text-white font-semibold rounded-lg cursor-not-allowed">
+                  <span className=" text-[11px]  md:text-xl px-2 md:px-6 py-2 bg-yellow-500 text-white font-semibold rounded-lg cursor-not-allowed">
                     🚧 Work in Progress
                   </span>
                 ) : (
@@ -194,7 +194,7 @@ const Portfolio = () => {
                     href={project.previewLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-accent transition"
+                    className="text-[11px]  md:text-xl px-2 md:px-6 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-accent transition"
                   >
                     Preview Website
                   </a>

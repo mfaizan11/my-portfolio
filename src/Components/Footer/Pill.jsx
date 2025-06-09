@@ -26,7 +26,7 @@ const AvailabilityPill = () => {
     // Add scroll event listener
     window.addEventListener("scroll", checkFooterVisibility);
 
-    // Clean up
+    // Clean upp
     return () => {
       window.removeEventListener("scroll", checkFooterVisibility);
     };
@@ -46,7 +46,7 @@ const AvailabilityPill = () => {
       </div>
 
       {/* Status text */}
-      <a href="#contact" className="font-medium text-[1.2vh] md:text-sm ">
+      <a href="https://wa.me/923066864003?text=Hi%2C%20I%27m%20interested%20in%20discussing%20a%20project%20with%20you.%20Can%20we%20connect%3F" target="_blank" rel="noopener noreferrer" className="font-medium text-[1.2vh] md:text-sm ">
         Available for work
       </a>
     </div>

@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 const services = [
   {
     id: 1,
-    title: "Web Development",
+    title: "Custom Web Development",
     icon: <Icon icon="fa-solid:code" width="40" height="40" />,
     description:
       "Custom websites using modern technologies. Specialized in both static and dynamic websites with responsive design. From simple business sites to complex web applications.",
@@ -12,16 +12,16 @@ const services = [
   {
     id: 2,
     title: "Shopify Development",
-    icon: <Icon icon="fa-solid:shopping-cart" width="40" height="40" />,
+    icon: <Icon icon="fa-brands:shopify" width="40" height="40" />,
     description:
       "Full-service Shopify solutions including store setup, theme customization, and maintenance. Expert product listing, inventory management, and payment gateway integration.",
   },
   {
     id: 4,
-    title: "Social Media Management",
-    icon: <Icon icon="fa-solid:users" width="40" height="40" />,
+    title: "Wordpress Website Development",
+    icon: <Icon icon="fa-brands:wordpress" width="40" height="40" />,
     description:
-      "Strategic social media management across platforms. Content creation, community engagement, and paid campaigns. Analytics tracking and audience growth strategies.",
+      "Full-service WordPress solutions including custom themes, plugin setup, and performance optimization. Expert in Elementor, Astra, and WooCommerce for responsive, user-friendly websites.",
   },
   {
     id: 5,

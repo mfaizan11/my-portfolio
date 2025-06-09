@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import { Link } from "react-scroll";
 import { Icon } from "@iconify/react";
-import Logo from "../../assets/Logo.png";
+import Logo from "../../assets/Logo.webp";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-4 md:py-2">
           {/* Logo */}
           <a href="#" className="h-full">
-            <img src={Logo} alt="Logo" className="h-12 md:h-16" />
+            <img src={Logo} alt="Logo" className="h-12 md:h-16" height={64} width={64} />
           </a>
 
           {/* Mobile Contact Info (Visible only on mobile) */}
@@ -29,6 +29,7 @@ const Navbar = () => {
               <a
                 href="https://www.linkedin.com/in/muhammad-faizan-76a024283/"
                 target="_blank"
+                aria-label="LinkedIn"
                 rel="noopener noreferrer"
                 className="text-primary hover:text-accent text-xl"
               >
@@ -37,6 +38,7 @@ const Navbar = () => {
               <a
                 href="https://github.com/mfaizan11"
                 target="_blank"
+                aria-label="GitHub"
                 rel="noopener noreferrer"
                 className="text-primary hover:text-accent text-xl"
               >

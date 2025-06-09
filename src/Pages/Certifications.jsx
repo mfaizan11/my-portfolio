@@ -4,8 +4,20 @@ import versioncontrol from "../assets/versioncontrol.webp";
 import jsfoundationsmozila from "../assets/jsfoundationsmozila.webp";
 import cssforprogrammers from "../assets/cssforprogrammers.webp";
 import gitessetialtraining from "../assets/gitessentialtraining.webp";
+import advancereact from "../assets/advancereact.webp";
+import design from "../assets/design.webp"
 
 const cert = [
+  {
+    title: "Advance React Certification by Meta",
+    img: advancereact,
+    link: "https://www.coursera.org/account/accomplishments/verify/35WJ4KFNVW6V",
+  },
+  {
+    title: "Principles of UI/UX Design Certification by Meta",
+    img: design,
+    link: "https://www.coursera.org/account/accomplishments/verify/SBF6DYVGX74A",
+  },
   {
     title: "React Basic Certification by Meta",
     img: ReactBasic,
@@ -47,11 +59,11 @@ function Certifications() {
             Certifications
           </h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto px-4 h-full md:w-[180vh] ">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3  md:gap-5 mx-auto md:px-4 h-full md:w-[180vh] ">
             {cert.map((item, index) => (
               <div
                 key={index}
-                className=" p-6 py-10  justify-center items-center"
+                className="p-4 md:p-6 py-10  justify-center items-center"
               >
                 <img
                   src={item.img}
