@@ -55,7 +55,7 @@ function Certifications() {
     <>
       <section className="bg-darkBg min-h-screen text-center justify-center items-center">
         <div className="py-16 ">
-          <h1 className="text-4xl sm:text-5xl md:text-5xl font-bold text-primary mb-4 sm:mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
             Certifications
           </h1>
 

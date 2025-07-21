@@ -130,12 +130,12 @@ const Portfolio = () => {
   return (
     <section id="projects" className="py-12 px-6 bg-white text-primary">
       <div className="container mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">
+        <h2 className="text-3xl sm:text-4xl md:text-[48px] font-bold text-center mb-8">
           Recent Projects
         </h2>
 
         {/* Unified grid for all projects */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -186,7 +186,7 @@ const Portfolio = () => {
               </div>
               <div className=" mt-4 text-center flex flex-row items-center justify-center gap-4">
                 {project.comingSoon ? (
-                  <span className=" text-[11px]  md:text-xl px-2 md:px-6 py-2 bg-yellow-500 text-white font-semibold rounded-lg cursor-not-allowed">
+                  <span className=" text-[11px]  md:text-xl px-2 md:px-6 py-2 bg-yellow-600 text-white font-semibold rounded-lg cursor-not-allowed">
                     🚧 Work in Progress
                   </span>
                 ) : (
@@ -194,7 +194,7 @@ const Portfolio = () => {
                     href={project.previewLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[11px]  md:text-xl px-2 md:px-6 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-accent transition"
+                    className="text-[11px]  md:text-xl px-2 md:px-6 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-black transition"
                   >
                     Preview Website
                   </a>

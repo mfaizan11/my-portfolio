@@ -10,8 +10,7 @@ import wordpressIcon from "@iconify-icons/fa-brands/wordpress";
 import shopifyIcon from "@iconify-icons/simple-icons/shopify";
 import tailwindcssIcon from "@iconify-icons/simple-icons/tailwindcss";
 
-import { motion } from "framer-motion";
-import { Link } from "react-scroll";
+
 
 const About = () => {
   const icons = [
@@ -66,29 +65,6 @@ const About = () => {
         </div>
       </div>
 
-      <div className="bottom-8 sm:bottom-28 lg:bottom-12 xl:bottom-20 flex flex-col items-center mt-1.5 lg:mt-0">
-        <span className="text-xs sm:text-sm mt-6 text-primary opacity-80 mb-1 sm:mb-2">
-          Services
-        </span>
-        <Link
-          to="services"
-          smooth={true}
-          duration={800}
-          offset={-100}
-          className="flex justify-center items-center cursor-pointer"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0], scale: [1, 1.2, 1] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <Icon
-              icon="fa:chevron-down"
-              className="text-primary opacity-80 hover:text-accent transition"
-              width="28"
-            />
-          </motion.div>
-        </Link>
-      </div>
     </div>
   );
 };

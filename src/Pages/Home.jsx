@@ -60,7 +60,7 @@ const Home = () => {
         </div>
 
         {/* Profile Image */}
-        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-accent shadow-lg flex items-center justify-center">
+        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white shadow-lg flex items-center justify-center">
           <img
             src={PortLogo}
             alt="Profile"
@@ -90,7 +90,7 @@ const Home = () => {
               href="https://www.linkedin.com/in/muhammad-faizan-76a024283"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 sm:px-6 sm:py-3 bg-primary text-white text-sm sm:text-base font-semibold rounded-lg shadow-md hover:bg-accent transition cursor-pointer z-50"
+              className="px-5 py-2 sm:px-6 sm:py-3 bg-primary text-white text-sm sm:text-base font-semibold rounded-lg shadow-md hover:bg-[#8000ffa1] transition cursor-pointer z-50"
             >
               Let&apos;s Connect
             </a>
@@ -109,8 +109,8 @@ const Home = () => {
       </motion.div>
 
       {/* Scroll Down Arrow */}
-      <div className="absolute bottom-24 sm:bottom-16 flex flex-col items-center">
-        <span className="text-gray-200 text-xs sm:text-sm opacity-90 mb-1 sm:mb-2">
+      <div className="absolute bottom-20 sm:bottom-16 flex flex-col items-center">
+        <span className="text-gray-200 text-xs sm:text-sm opacity-90 mb-1 sm:mb-2 ">
           About Me
         </span>
         <button
@@ -121,7 +121,7 @@ const Home = () => {
         >
           <Icon
             icon="fa:chevron-down"
-            className="text-primary opacity-80 hover:text-accent transition"
+            className="text-primary opacity-80 hover:text-white transition"
             width="28"
           />
         </button>

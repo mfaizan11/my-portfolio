@@ -47,7 +47,7 @@ const Contact = () => {
       className="relative min-h-[80vh] flex flex-col py-4 items-center justify-center bg-darkBg overflow-hidden px-4 pt-10"
     >
       <div className="relative bg-white/10 backdrop-blur-3xl p-6 sm:p-8 md:p-10 lg:p-12 min-h-[50vh] sm:min-h-[60vh] rounded-3xl shadow-lg max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl mx-4 flex flex-col items-center space-y-6">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center">
           Get in Touch
         </h2>
 

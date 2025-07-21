@@ -4,31 +4,29 @@ const AvailabilityPill = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Function to check if footer is visible
-    const checkFooterVisibility = () => {
-      const footer = document.querySelector("footer");
-      if (!footer) return;
+    const footer = document.querySelector("footer");
+    if (!footer) return;
 
-      const footerRect = footer.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      // If footer is in viewport, hide the pill
-      if (footerRect.top < windowHeight && footerRect.bottom > 0) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
+    // Intersection Observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // pill will be hidden when footer is visible
+          setIsVisible(!entry.isIntersecting);
+        });
+      },
+      {
+        // Trigger when footer starts entering viewport
+        rootMargin: "0px 0px 0px 0px",
+        threshold: 0
       }
-    };
+    );
 
-    // Check visibility initially
-    checkFooterVisibility();
+    observer.observe(footer);
 
-    // Add scroll event listener
-    window.addEventListener("scroll", checkFooterVisibility);
-
-    // Clean upp
+    // Cleanup
     return () => {
-      window.removeEventListener("scroll", checkFooterVisibility);
+      observer.disconnect();
     };
   }, []);
 
@@ -46,7 +44,12 @@ const AvailabilityPill = () => {
       </div>
 
       {/* Status text */}
-      <a href="https://wa.me/923066864003?text=Hi%2C%20I%27m%20interested%20in%20discussing%20a%20project%20with%20you.%20Can%20we%20connect%3F" target="_blank" rel="noopener noreferrer" className="font-medium text-[1.2vh] md:text-sm ">
+      <a 
+        href="https://wa.me/923066864003?text=Hi%2C%20I%27m%20interested%20in%20discussing%20a%20project%20with%20you.%20Can%20we%20connect%3F" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="font-medium text-[1.2vh] md:text-sm"
+      >
         Available for work
       </a>
     </div>

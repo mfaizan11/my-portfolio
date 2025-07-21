@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-4 md:py-2">
           {/* Logo */}
           <a href="#" className="h-full">
-            <img src={Logo} alt="Logo" className="h-12 md:h-16" height={64} width={64} />
+            <img src={Logo} alt="Logo" className="h-12 md:h-16" height={64} width={64} fetchPriority="high"/>
           </a>
 
           {/* Mobile Contact Info (Visible only on mobile) */}
@@ -31,7 +31,7 @@ const Navbar = () => {
                 target="_blank"
                 aria-label="LinkedIn"
                 rel="noopener noreferrer"
-                className="text-primary hover:text-accent text-xl"
+                className="text-primary hover:text-black text-xl"
               >
                 <Icon icon="fa-brands:linkedin" />
               </a>
@@ -40,7 +40,7 @@ const Navbar = () => {
                 target="_blank"
                 aria-label="GitHub"
                 rel="noopener noreferrer"
-                className="text-primary hover:text-accent text-xl"
+                className="text-primary hover:text-black text-xl"
               >
                 <Icon icon="fa-brands:github" />
               </a>
@@ -48,29 +48,29 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8 text-xl font-semibold">
+          <div className="hidden md:flex space-x-8 text-[18px] font-semibold">
             <a
               href="#about"
-              className="cursor-pointer text-primary hover:text-accent transition"
+              className="cursor-pointer text-primary hover:text-black transition"
             >
               Who I Am
             </a>
             <a
               href="#services"
-              className="text-primary hover:text-accent transition"
+              className="text-primary hover:text-black transition"
             >
               What I Do
             </a>
 
             <a
               href="#projects"
-              className="cursor-pointer text-primary hover:text-accent transition"
+              className="cursor-pointer text-primary hover:text-black transition"
             >
               Portfolio & Work
             </a>
             <a
               href="#contact"
-              className="cursor-pointer text-primary hover:text-accent transition"
+              className="cursor-pointer text-primary hover:text-black transition"
             >
               Let&apos;s Connect
             </a>
@@ -78,7 +78,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="text-4xl md:hidden text-primary focus:outline-none"
+            className="text-4xl md:hidden text-primary focus:outline-none transition-smooth ease-in-out  duration-200 "
             onClick={() => setIsOpen(!isOpen)}
           >
             ☰
@@ -90,7 +90,7 @@ const Navbar = () => {
           <div className="md:hidden flex flex-col items-center py-4 space-y-4 bg-white border-1 border-primary rounded-2xl m-4 shadow-lg">
             <a
               href="#about"
-              className="cursor-pointer text-primary hover:text-accent transition"
+              className="cursor-pointer text-primary hover:text-black transition"
               onClick={() => setIsOpen(false)}
             >
               Who I Am
@@ -98,7 +98,7 @@ const Navbar = () => {
             <a
               href="#services"
               onClick={() => setIsOpen(false)}
-              className="text-primary hover:text-accent transition"
+              className="text-primary hover:text-black transition"
             >
               What I Do
             </a>
@@ -106,14 +106,14 @@ const Navbar = () => {
             <a
               href="#projects"
               onClick={() => setIsOpen(false)}
-              className="cursor-pointer text-primary hover:text-accent transition"
+              className="cursor-pointer text-primary hover:text-black transition"
             >
               Portfolio & Work
             </a>
             <a
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="cursor-pointer text-primary hover:text-accent transition"
+              className="cursor-pointer text-primary hover:text-black transition"
             >
               Let&apos;s Connect
             </a>

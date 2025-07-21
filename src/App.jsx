@@ -1,17 +1,18 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Pages/Home";
-import LazySection from "./Components/LazySection";
+import Services from "./Pages/Services";
+import Projects from "./Pages/Projects";
+import Issues from "./Pages/Issues";
+import Certifications from "./Pages/Certifications";
+import Contact from "./Pages/Contact";
+
+import Skeleton from "./Components/Skeleton"; 
 import "./index.css";
 
-// Lazy imports
+// Lazy load About only
 const About = lazy(() => import("./Pages/About"));
-const Services = lazy(() => import("./Pages/Services"));
-const Projects = lazy(() => import("./Pages/Projects"));
-const Issues = lazy(()=> import("./Pages/Issues"));
-const Certifications = lazy(() => import("./Pages/Certifications"))
-const Contact = lazy(() => import("./Pages/Contact"));
 
 const App = () => {
   return (
@@ -19,12 +20,17 @@ const App = () => {
       <Navbar />
       <Home />
 
-      <LazySection load={() => <About />} fallback={<div className="text-primary text-center p-10">Loading Sections...</div>} />
-      <LazySection load={() => <Services />} fallback={<div className="text-primary p-10"></div>} />
-      <LazySection load={() => <Projects />} fallback={<div className="text-primary p-10"></div>} />
-      <LazySection load={() => <Issues/>} fallback={<div className="text-primary p-10"></div>} />
-      <LazySection load={() => <Certifications />} fallback={<div className="text-primary p-10"></div>} />
-      <LazySection load={() => <Contact />} fallback={<div className="text-primary p-10"></div>} />
+      {/* Lazy About section with skeleton fallback */}
+      <Suspense fallback={<Skeleton />}>
+        <About />
+      </Suspense>
+
+      {/* Direct imports, no lazy */}
+      <Services />
+      <Projects />
+      <Issues />
+      <Certifications />
+      <Contact />
 
       <Footer />
     </>

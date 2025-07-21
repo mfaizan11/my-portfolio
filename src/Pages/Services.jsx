@@ -46,7 +46,7 @@ const Services = () => {
       id="services"
       className="relative min-h-screen flex flex-col items-center justify-center bg-darkBg overflow-hidden px-4 py-8 md:py-16"
     >
-      <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold text-primary mb-4 sm:mb-6">
+      <h2 className="text-4xl sm:text-5xl md:text-[48px] font-bold text-white !mb-8 sm:mb-6">
         Services
       </h2>
 
