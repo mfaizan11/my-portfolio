@@ -8,18 +8,37 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 5173,
   },
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp/i.test(ext)) {
+            return `assets/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        },
+      },
+    },
+    assetsInlineLimit: 0, 
+  },
   plugins: [
     react(),
     tailwindcss(),
     viteCompression({
       algorithm: 'gzip',
       ext: '.gz',
-      threshold: 10240,
+      threshold: 1024, 
+      deleteOriginFile: false, 
+      include: /\.(js|css|html|svg)$/i, 
     }),
     viteCompression({
       algorithm: 'brotliCompress',
       ext: '.br',
-      threshold: 10240,
+      threshold: 1024,
+      deleteOriginFile: false,
+      include: /\.(js|css|html|svg)$/i,
     }),
   ],
 });
