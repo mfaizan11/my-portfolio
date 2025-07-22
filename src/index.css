@@ -32,7 +32,7 @@ body {
 @media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
   /* styles specifically for iPhone SE */
   .bottom-26 {
-    bottom: calc(var(--spacing) * 16) /* 5rem = 80px */;
+    bottom: calc(var(--spacing) * 26) /* 5rem = 80px */;
 }
 
 .h-32 {
