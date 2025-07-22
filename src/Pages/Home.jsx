@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <div
-      className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden px-4"
+      className="relative min-h-screen w-full flex flex-col items-center bg-darkBg justify-center overflow-hidden px-4"
       style={{
         backgroundImage: `url(${heroImage})`,
         backgroundSize: "cover",
