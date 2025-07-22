@@ -186,7 +186,7 @@ const Portfolio = () => {
               </div>
               <div className=" mt-4 text-center flex flex-row items-center justify-center gap-4">
                 {project.comingSoon ? (
-                  <span className=" text-[11px]  md:text-xl px-2 md:px-6 py-2 bg-green-600 text-white font-semibold rounded-lg cursor-not-allowed">
+                  <span className=" text-[11px]  md:text-xl px-2 md:px-6 py-2 bg-green-700 text-white font-semibold rounded-lg cursor-not-allowed">
                     🚧 Work in Progress
                   </span>
                 ) : (
