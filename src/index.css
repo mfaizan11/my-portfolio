@@ -28,3 +28,27 @@ body {
   background-color: var(--color-background);
   color: var(--color-darkBg);
 }
+
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+  /* styles specifically for iPhone SE */
+  .bottom-26 {
+    bottom: calc(var(--spacing) * 20) /* 5rem = 80px */;
+}
+
+.h-32 {
+    height: calc(var(--spacing) * 24) /* 8rem = 128px */;
+}
+
+.w-32 {
+    width: calc(var(--spacing) * 24) /* 8rem = 128px */;
+}
+
+.text-xl {
+    font-size: var(--text-md) /* 1.25rem = 20px */;
+    line-height: var(--tw-leading, var(--text-md--line-height) /* calc(1.75 / 1.25) ≈ 1.4 */);
+}
+
+.min-h-screen {
+    min-height: 110vh;
+}
+}

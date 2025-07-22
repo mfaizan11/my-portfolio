@@ -1,6 +1,8 @@
 import { useMemo } from "react";
 import { motion } from "framer-motion";
 import PortLogo from "../assets/PortLogo.webp";
+import Badge from "../assets/meta-front-end-developer-certificate.webp";
+// import Badgedesk from "../assets/meta-front-end-developer-certificate.png";
 import myCV from "../assets/Muhammad-Faizan-Resume.pdf";
 import heroImage from "../assets/herosect.webp";
 import { Icon } from "@iconify/react";
@@ -60,26 +62,29 @@ const Home = () => {
         </div>
 
         {/* Profile Image */}
-        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white shadow-lg flex items-center justify-center">
+        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-60 md:h-60 z-50 rounded-full overflow-hidden border-4 border-white shadow-lg flex items-center justify-center">
           <img
             src={PortLogo}
             alt="Profile"
-            width="200"
-            height="200"
+            width="250"
+            height="250"
             loading="eager"
             fetchPriority="high"
             decoding="async"
-            className="object-cover"
+            className="object-cover relative"
           />
+          {/* <img src={Badgedesk} alt="Meta Frontend Certified Developer Badge" height="80px" width="80px" className="absolute hidden md:flex md:bottom-30 md:left-48 rounded-full border-2 border-white"/> */}
         </div>
 
         {/* Text Content */}
-        <div className="text-center md:text-left px-2 sm:px-4">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold font-poppins text-white">
+        <div className="text-center md:text-left px-2 sm:px-4 z-50">
+          <h1 className="text-xl sm:text-3xl md:text-4xl font-bold font-poppins text-white">
             Hi, I&apos;m <br />
-            <span className="text-primary">Muhammad Faizan!</span>
+            <span className="text-white bg-primary leading-relaxed px-2">
+              Muhammad Faizan!
+            </span>
           </h1>
-          <p className="mt-3 text-sm sm:text-base md:text-lg text-gray-200">
+          <p className="mt-3 max-w-[50vh] text-sm sm:text-base md:text-md text-white">
             A <b>passionate</b> <b>web developer</b> crafting{" "}
             <b>stunning digital experiences</b>.
           </p>
@@ -106,10 +111,26 @@ const Home = () => {
             </a>
           </div>
         </div>
+
+        <div className="z-50">
+          <a
+            href="https://www.credly.com/badges/a1074d06-037e-41d3-b441-407201dd0483/public_url"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={Badge}
+              alt="Meta Frontend Certified Developer Badge"
+              height="80px"
+              width="80px"
+              className="h-[10vh] w-[10vh] md:h-[20vh] md:w-[20vh] flex"
+            />
+          </a>
+        </div>
       </motion.div>
 
       {/* Scroll Down Arrow */}
-      <div className="absolute bottom-20 sm:bottom-16 flex flex-col items-center">
+      <div className="absolute bottom-26  sm:!bottom-16 flex flex-col items-center">
         <span className="text-gray-200 text-xs sm:text-sm opacity-90 mb-1 sm:mb-2 ">
           About Me
         </span>

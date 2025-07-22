@@ -11,8 +11,8 @@ const Navbar = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4 md:py-2">
           {/* Logo */}
-          <a href="#" className="h-full">
-            <img src={Logo} alt="Logo" className="h-12 md:h-16" height={64} width={64} fetchPriority="high"/>
+          <a href="/" className="h-full">
+            <img src={Logo} alt="Logo" className="h-16 md:h-16" height={64} width={64} fetchPriority="high"/>
           </a>
 
           {/* Mobile Contact Info (Visible only on mobile) */}
