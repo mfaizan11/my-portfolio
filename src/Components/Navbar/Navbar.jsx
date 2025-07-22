@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white/90 border-2 border-primary backdrop-blur-md fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[90%] max-w-6xl shadow-[0_0_15px_rgba(255,255,255,0.6)] drop-shadow-lg rounded-3xl">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4 md:py-2">
+        <div className="flex justify-between items-center py-2 md:py-2">
           {/* Logo */}
           <a href="/" className="h-full">
             <img src={Logo} alt="Logo" className="h-16 md:h-16" height={64} width={64} fetchPriority="high"/>

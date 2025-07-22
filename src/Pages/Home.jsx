@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <div
-      className="relative min-h-screen flex flex-col items-center justify-center bg-darkBg overflow-hidden px-4"
+      className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden px-4"
       style={{
         backgroundImage: `url(${heroImage})`,
         backgroundSize: "cover",
@@ -34,7 +34,7 @@ const Home = () => {
     >
       {/* Glassmorphic Hero Content */}
       <motion.div
-        className="relative bg-white/10 backdrop-blur-3xl p-4 sm:p-6 md:p-8 lg:p-12 min-h-[50vh] sm:min-h-[60vh] rounded-3xl shadow-lg max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-4 flex flex-col md:flex-row items-center space-y-6 md:space-x-6"
+        className="relative bg-white/10 w-full  backdrop-blur-3xl px-4 py-3 sm:p-6 md:p-8 lg:p-12 min-h-[40vh] sm:min-h-[60vh] rounded-3xl shadow-lg max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-4 flex flex-col md:flex-row items-center space-y-6 md:space-x-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
@@ -62,7 +62,7 @@ const Home = () => {
         </div>
 
         {/* Profile Image */}
-        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-60 md:h-60 z-50 rounded-full overflow-hidden border-4 border-white shadow-lg flex items-center justify-center">
+        <div className="w-28 h-28 sm:w-40 sm:h-40 md:w-60 md:h-60 z-50 rounded-full overflow-hidden border-4 border-white shadow-lg flex items-center justify-center">
           <img
             src={PortLogo}
             alt="Profile"
@@ -78,24 +78,24 @@ const Home = () => {
 
         {/* Text Content */}
         <div className="text-center md:text-left px-2 sm:px-4 z-50">
-          <h1 className="text-xl sm:text-3xl md:text-4xl font-bold font-poppins text-white">
+          <h1 className="text-[clamp(10px,5vw,30px)] font-bold font-poppins  text-white">
             Hi, I&apos;m <br />
             <span className="text-white bg-primary leading-relaxed px-2">
               Muhammad Faizan!
             </span>
           </h1>
-          <p className="mt-3 max-w-[50vh] text-sm sm:text-base md:text-md text-white">
+          <p className="mt-3 max-w-[50vh] text-[clamp(10px,3.4vw,18px)] text-white">
             A <b>passionate</b> <b>web developer</b> crafting{" "}
             <b>stunning digital experiences</b>.
           </p>
 
           {/* Buttons */}
-          <div className="mt-5 flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="mt-5 flex flex-row sm:flex-row gap-3 sm:gap-4 justify-center items-center md:justify-start">
             <a
               href="https://www.linkedin.com/in/muhammad-faizan-76a024283"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 sm:px-6 sm:py-3 bg-primary text-white text-sm sm:text-base font-semibold rounded-lg shadow-md hover:bg-[#8000ffa1] transition cursor-pointer z-50"
+              className="p-2 bg-primary text-white text-[clamp(10px,3vw,16px)] font-semibold rounded-lg shadow-md hover:bg-[#8000ffa1] transition cursor-pointer z-50"
             >
               Let&apos;s Connect
             </a>
@@ -105,7 +105,7 @@ const Home = () => {
               download="Muhammad-Faizan-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 sm:px-6 sm:py-3 bg-white/10 text-white text-sm sm:text-base font-semibold rounded-lg shadow-md hover:bg-primary hover:text-white transition z-50"
+              className="p-2 bg-white/20 text-white text-[clamp(10px,3vw,16px)]  font-semibold rounded-lg shadow-md  hover:bg-primary hover:text-white transition z-50"
             >
               Download Resume
             </a>
