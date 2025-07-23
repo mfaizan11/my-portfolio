@@ -19,9 +19,9 @@
 html {
   scroll-behavior: smooth;
 }
-:root {
+/* :root {
   scroll-padding-top: 80px; 
-}
+} */
 
 body {
   font-family: var(--font-display);

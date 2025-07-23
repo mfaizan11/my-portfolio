@@ -59,7 +59,7 @@ function Certifications() {
             Certifications
           </h1>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3  md:gap-5 mx-auto md:px-4 h-full md:w-[180vh] ">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3  md:gap-5 mx-auto md:px-4 h-full max-w-7xl ">
             {cert.map((item, index) => (
               <div
                 key={index}

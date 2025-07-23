@@ -128,14 +128,14 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <section id="projects" className="py-12 px-6 bg-white text-primary">
-      <div className="container mx-auto">
+    <section id="projects" className="py-12 px-6 bg-white min-h-screen text-primary">
+      <div className="container mx-auto ">
         <h2 className="text-3xl sm:text-4xl md:text-[48px] font-bold text-center mb-8">
           Recent Projects
         </h2>
 
         {/* Unified grid for all projects */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
