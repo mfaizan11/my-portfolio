@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-2 md:py-2">
           {/* Logo */}
           <a href="/" className="h-full">
-            <img src={Logo} alt="Logo" className="h-10 md:h-14" height={60} width={60} fetchPriority="high"/>
+            <img src={Logo} alt="Logo" className="h-12 w-12 md:w-16 md:h-16" height={60} width={60} fetchPriority="high"/>
           </a>
 
           {/* Mobile Contact Info (Visible only on mobile) */}
