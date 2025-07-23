@@ -68,7 +68,8 @@ function Certifications() {
                 <img
                   src={item.img}
                   alt={`${item.title} - certificate image`}
-                  className="w-full h-full object-contain mx-auto -mt-4 z-[50]  "
+                  className="w-full h-full object-contain mx-auto -mt-4 z-[50]"
+                  loading="lazy"
                 />
                 <a
                   href={item.link}
