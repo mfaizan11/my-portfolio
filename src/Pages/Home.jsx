@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <div
-      className="relative min-h-screen w-full flex flex-col items-center bg-darkBg justify-center overflow-hidden px-4"
+      className="relative  min-h-screen w-full flex flex-col items-center bg-darkBg justify-center overflow-hidden px-4"
       style={{
         backgroundImage: `url(${heroImage})`,
         backgroundSize: "cover",
@@ -34,7 +34,7 @@ const Home = () => {
     >
       {/* Glassmorphic Hero Content */}
       <motion.div
-        className="relative bg-white/10 w-full  backdrop-blur-3xl px-4 py-3 sm:p-6 md:p-8 lg:p-12 min-h-[40vh] sm:min-h-[60vh] rounded-3xl shadow-lg max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-4 flex flex-col md:flex-row items-center space-y-6 md:space-x-6"
+        className="relative bg-white/10 w-full topMargin backdrop-blur-3xl px-4 py-3 sm:p-6 md:p-8 lg:p-12 min-h-[40vh] sm:min-h-[60vh] rounded-3xl shadow-lg max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-4 flex flex-col md:flex-row items-center space-y-6 md:space-x-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >

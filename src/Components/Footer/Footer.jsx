@@ -52,7 +52,7 @@ const Footer = () => {
           <a href="#services" className="hover:text-accent transition">
             What I Do
           </a>
-          <a href="#portfolio" className="hover:text-accent transition">
+          <a href="#projects" className="hover:text-accent transition">
             Portfolio
           </a>
           <a href="#contact" className="hover:text-accent transition">

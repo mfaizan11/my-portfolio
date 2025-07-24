@@ -29,7 +29,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="lg:min-h-[90svh] min-h-[95svh] flex flex-col items-center justify-start sm:justify-center text-white px-4 sm:px-6 pt-16 pb-4 sm:py-12 lg:py-6 relative"
+      className="lg:min-h-[90svh] min-h-[80svh] flex flex-col items-center justify-center text-white px-4 sm:px-6 pt-16 pb-4 sm:py-12 lg:py-6 relative"
     >
       <div className="relative max-w-4xl text-center z-10">
         <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold text-primary mb-4 sm:mb-6">

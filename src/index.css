@@ -19,9 +19,9 @@
 html {
   scroll-behavior: smooth;
 }
-/* :root {
-  scroll-padding-top: 80px; 
-} */
+:root {
+  scroll-padding-bottom: 80px !important; 
+}
 
 body {
   font-family: var(--font-display);
@@ -29,25 +29,69 @@ body {
   color: var(--color-darkBg);
 }
 
-@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
-  /* styles specifically for iPhone SE */
-.bottom-26 {
-    bottom: calc(var(--spacing) * 2) /* 6.5rem = 104px */;
-}
-.h-32 {
-    height: calc(var(--spacing) * 24) /* 8rem = 128px */;
-}
+@media (max-width: 375px) {
+  .topMargin {
+    margin-top: calc(var(--spacing) * 2);
+  }
 
-.w-32 {
-    width: calc(var(--spacing) * 24) /* 8rem = 128px */;
-}
+  .bottom-26 {
+    bottom: calc(var(--spacing) * 2);
+  }
 
-.text-xl {
-    font-size: var(--text-md) /* 1.25rem = 20px */;
-    line-height: var(--tw-leading, var(--text-md--line-height) /* calc(1.75 / 1.25) ≈ 1.4 */);
-}
+  .h-32, .w-32 {
+    height: calc(var(--spacing) * 24);
+    width: calc(var(--spacing) * 24);
+  }
 
-.min-h-screen {
+  .text-xl {
+    font-size: var(--text-md);
+    line-height: var(--tw-leading, var(--text-md--line-height));
+  }
+
+  .min-h-screen {
     min-height: 110vh;
+  }
 }
+
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/poppins-v23-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/poppins-v23-latin-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/poppins-v23-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/poppins-v23-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/poppins-v23-latin-800.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+
