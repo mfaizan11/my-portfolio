@@ -121,8 +121,8 @@ const Home = () => {
             <img
               src={Badge}
               alt="Meta Frontend Certified Developer Badge"
-              height="80px"
-              width="80px"
+              height="80"
+              width="80"
               className="h-[10vh] w-[10vh] md:h-[20vh] md:w-[20vh] flex"
             />
           </a>

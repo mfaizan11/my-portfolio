@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import Logo from "../../assets/Logo.png";
+import Logo from "../../assets/Logo.webp";
 import Pill from "./Pill";
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="flex flex-col items-center">
           <a href="#" className="h-full flex justify-center items-center">
-            <img src={Logo} alt="Logo" className="h-12 md:h-16" />
+            <img src={Logo} alt="Logo" height={60} width={60} className="h-12 md:h-16" />
           </a>
           <p className="mt-2 text-gray-400"> {/* Updated text-secondary */}
             Coding, one project at a time.
